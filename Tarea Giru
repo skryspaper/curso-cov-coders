@@ -1,0 +1,42 @@
+/*Tarea Gricel
+Hacer una lista que muestre un listado de cosas que uno escribe
+en un input. Al apretar el botón añadir, se agrega un elemento
+a la lista. Debe haber un botón quitar, que quite el último
+y un botón de reset que borre todo. Hacer en HTML y JS*/
+
+<button type="button" onclick="add()"> Añadir </button>
+<button type="button" onclick="rest()"> Quitar </button>
+<button type="button" onclick="reset()"> Apocalipsis</button>
+
+<p id="lista"></p>
+
+<script>
+    var pokes = ["Dragonite","Gyarados","Tyranitar","Rhydon"]
+    document.getElementById("lista").innerHTML = pokes
+
+    function add() {
+        var ventana = prompt("Agrega Poke");
+        pokes.push(ventana);
+        document.getElementById("lista").innerHTML = pokes;
+    }
+</script>
+
+<script>
+    var pokes = ["Dragonite","Gyarados","Tyranitar","Rhydon"]
+    document.getElementById("lista").innerHTML = pokes
+
+    function rest() {
+        pokes.pop();
+        document.getElementById("lista").innerHTML = pokes;
+    }
+</script>
+
+<script>
+    var pokes = ["Dragonite","Gyarados","Tyranitar","Rhydon"]
+    document.getElementById("lista").innerHTML = pokes
+
+    function reset() {
+        pokes.splice(0,100);
+        document.getElementById("lista").innerHTML = pokes;
+    }
+</script>
